@@ -1,0 +1,434 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: banchero;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'Banchero';
+    src: url('Font/Banchero-Bold.otf') format('otf');
+}
+
+html{
+    scroll-behavior: smooth;
+}
+body{
+    background-color: #FEFAE0;
+    color: #282d71;
+}
+
+#header{
+    width: 100%;
+    height: 100vh;
+    background-image: url("images/background.png");
+    background-size: cover;
+    background-position: center;
+}
+
+#header2{
+    background-color: #d3d3d3;
+    background-size: cover;
+    background-position: center;
+}
+
+
+.container{
+    padding: 30px;
+}
+
+/* CSS for the buttons */
+#sidemenu button {
+    font-family: banchero;
+    background-color: transparent;
+    padding: 10px 20px;
+    color: rgb(32, 32, 32); /* Button text color */
+    border: 3px; /* Remove button border */
+    border-color: rgb(146, 140, 173, 0.5);
+    cursor: pointer;
+    font-size: 20px;
+    margin: 5px;
+    transition: background-color 0.3s; /* Add transition effect */
+    border-radius: 50px; /* Add border radius */
+}
+
+/* Hover effect */
+#sidemenu button:hover {
+    background-color: rgb(146, 140, 173, 0.4); /* Button background color on hover */
+    border: 3px; /* Remove button border */
+    border-color: rgb(146, 140, 173, 0.2);
+}
+
+/* Active effect */
+#sidemenu button:active {
+    transform: translateY(1px); /* Button press effect */
+}
+
+/* Focus effect */
+#sidemenu button:focus {
+    outline: none; /* Remove default button outline */
+    box-shadow: 0 0 0 2px #0056b3; /* Add custom focus outline */
+}
+
+/* CSS for the navigation menu */
+#sidemenu {
+    list-style-type: none;
+    margin: 0 auto; /* Center the menu horizontally */
+    padding: 0;
+    text-align: center; /* Center the text inside the buttons */
+}
+
+#sidemenu li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+/* CSS for the close menu icon */
+.fas.fa-times-circle {
+    display: none; /* Hide the close menu icon initially */
+}
+
+/* CSS for the ellipsis icon */
+.fas.fa-ellipsis-v {
+    cursor: pointer;
+}
+/*---------ABOUT--------*/
+#about{
+    width: 100%;
+    height: 100vh;
+    background-color: #d3d3d3;
+}
+#about{
+    padding: 80px 0;
+    font-family: banchero;
+    font-size: 20px;
+    color: #272727;
+
+}
+.row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.about-col-1{
+    flex-basis: 35%;
+}
+
+.about-col-1 img{
+    width: 100%;
+    border-radius: 1000px;
+}
+
+.about-col-2{
+    flex-basis: 60%;
+}
+.sub-title{
+    font-size: 60px;
+    font-family: banchero;
+    font-weight: 600;
+    color: #282d71;
+}
+
+.tab-links {
+    font-family: banchero;
+    display: inline-block;
+    margin: 20px 30px;
+    padding: 1px 20px;
+    border: 3px solid #282d71;
+    border-radius: 50px;
+    color: #272727;
+    cursor: pointer;
+    position: relative;
+    text-decoration: none;
+    transition: background-color 0.5s;
+}
+
+.tab-links:hover {
+    background: #282d71;
+    color: #f1f0e6;
+    border: 3px solid #272727;
+}
+
+.tab-links::after {
+    display: block;
+    height: 3px;
+    width: 100%;
+    background: #282d71;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.tab-links.active-link::after {
+    background: #282d71;
+}
+
+.tab-links.active-link {
+    background: #282d71;
+    border: 3px solid #282d71;
+    color: #f1f0e6;
+}
+
+.tab-contents ul li{
+    list-style: none;
+    margin: 15px;
+    transition: transform 0.5s;
+}
+
+.tab-contents ul li span{
+    font-family: banchero;
+    color:#282d71;
+    font-size: 20px;
+}
+.tab-contents{
+    display: none;
+    transform: translateX(-5px);
+}
+.tab-contents.active-tab{
+    display: block;
+    transform: translateX(-5px);
+}
+
+/* ---------portfolio----------*/
+#background{
+    font-family: banchero;
+    width: 100%;
+    height: 230vh;
+    background-color: #d3d3d3;
+    background-size: cover;
+    background-position: center;
+}
+#portfolio{
+    font-family: banchero;
+    padding: 0px 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #d3d3d3;
+    background-size: cover;
+    background-position: center;
+}
+.work-list{
+    display: grid;
+    font-family: banchero;
+    color: #282d71;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+}
+@media (min-width: 768px) {
+    .work-list {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+.work{
+    font-family: banchero;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+.work img {
+    font-family: banchero;
+    width: 100%;
+    max-width: 550px;
+    border-radius: 10px;
+    display: block;
+    transition: transform 0.3s; /* Added transition property */
+    transform-origin: top left; /* Set transform origin to top left */
+}
+
+.work img:hover {
+    transform: scale(1.2); /* Added zoom effect on hover */
+}
+
+.btn{
+    background-color: transparent;
+    font-family: banchero;
+    font-size: 15px;
+    display: block;
+    margin: 40px auto;
+    width: fit-content;
+    border: 1px solid #272727;
+    padding: 14px 50px;
+    border-radius: 50px;
+    text-decoration: none;
+    color: #272727;
+    transition: background-color 0.5s;
+    cursor: pointer  !important;
+}
+.btn:hover{
+    font-family: banchero;
+    background: #282d71;
+    color: #d3d3d3;
+}
+.film-ko{
+    font-family: banchero;
+    margin-top: 50px;
+    text-align: center;
+}
+.movie{
+    font-family: banchero;
+    display: block;
+    margin: 00px auto;
+    margin-top: 90px;
+    width: fit-content;
+    text-decoration: none;
+    color: #a02c2c;
+}
+.film-header{
+    color: #a02c2c;
+    font-size: 30px;
+}
+/*----------------contact--------------*/
+.LoginReg{
+    font-size: 15px;
+    font-family: banchero;
+    color: #282d71;
+}
+#contact{
+    height: 110vh;
+    color: #282d71;
+    text-align: center;
+    background-color: #d3d3d3;
+}
+.contact-container {
+    color: #282d71;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Adjust the height based on your needs */
+    text-align: center;
+}
+
+.contact-left p i {
+    color: #282d71;
+    font-size: 20px;
+}
+
+.social-icons {
+    margin-top: 10px;
+}
+
+.feedback {
+    margin-top: 20px;
+    font-family: banchero;
+}
+.social-icons a {
+    text-decoration: none;
+    font-size: 30px;
+    margin-right: 15px;
+    color: #DDA15E;
+    display: inline-block;
+    transition: transform 0.5s;
+    color: #282d71;
+}
+
+.social-icons a:hover {
+    color: #ffffff;
+    transform: translateY(-5px);
+}
+.copyright{
+    color: #282d71;
+    width: 100%;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.contact-form form{
+    width: 100%;
+}
+form input, form textarea{
+    width: 50%;
+    border: 0;
+    outline: none;
+    background: #272727;
+    padding: 15px;
+    margin: 15px 0;
+    color: #d3d3d3;
+    font-size: 18px;
+    border-radius: 30px;
+}
+
+
+
+/*-------------------Responsiveness----------------*/
+nav .fas{
+    display: none;
+}
+
+@media only screen and (max-width: 600px){
+    #header{
+        background-image: url(images/phone-background.png);
+    }
+    .header-text{
+        margin-top: 100%;
+        font-size: 15px;
+    }
+    .header-text h1{
+        font-size: 30px;
+    }
+    nav .fas{
+        display: block;
+        font-size: 25px;
+    }
+    nav ul{
+        background: #6e6f77;
+        position: fixed;
+        top: 0;
+        right: -200px;
+        width: 200px;
+        height: 100vh;
+        padding-top: 50px;
+        z-index: 2;
+        transition: right 0.5s;
+    }
+    nav ul li{
+        display: block;
+        margin: 25px;
+    }
+    nav ul .fas{
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        cursor: pointer;
+    }
+    .sub-title{
+        font-size: 30px;
+    }
+    .about-col-1, .about-col-2{
+        flex-basis: 100%;
+    }
+    .about-col-1{
+        margin-bottom: 30px;
+    }
+    .about-col-2{
+        font-size: 14px;
+    }
+    .tab-links{
+        font-size: 16px;
+        margin-right: 20px;
+    }
+    .contact-left, .contact-right{
+        flex-basis: 100%;
+    }
+    .copyright{
+        font-size: 12px;
+    }
+    #background{
+        font-family: banchero;
+        width: 100%;
+        height: 600vh;
+        background-color: #d3d3d3;
+        background-size: cover;
+        background-position: center;
+    }
+    #about{
+        width: 100%;
+        height: 150vh;
+        background-color: #d3d3d3;
+    }
+    #contact{
+        height: 140vh;
+        color: #282d71;
+        text-align: center;
+        background-color: #d3d3d3;
+    }
+}
